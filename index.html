@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      function greeting(){
+        let name=prompt("Please input your name:")
+        window.alert('Hello '+name);
+        document.getElementById('demo').innerHTML = 'Hello '+name;
+      }
+      function changeTored(){
+        document.getElementById('demo').style.color="blue";
+        document.getElementById('demo').style.fontSize="50px";
+      }
+      function changeToDog(){
+        document.getElementById('pic').src="https://image.sistacafe.com/w800/images/uploads/summary/image/4600/1447843392-hipster-puppies.jpg";
+      }
+      function changeToCat(){
+        document.getElementById('pic').src="https://pbs.twimg.com/profile_images/1293918514785353729/vXCZMxif_400x400.jpg";
+      }
+    </script>
+  </head>
+  <body>
+    <h2>My First JavaScript</h2>
+    <img id="pic" src="cat.jpg"><br>
+    <button type="button" onclick="changeToDog()">dog</button>
+    <button type="button" onclick="changeToCat()">cat</button>
+    <button type="button" onclick="greeting()">
+    Click me to greeting.</button>
+    <button type="button" onclick="changeTored()">
+      Click me to display color of text.</button>
+    <p id="demo"></p>
+  </body>
+</html>
