@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button type="button" onclick="showProduct(proDuct)">Click me to Show Product</button>
+
+<p id="demo"></p>
+
+<script>
+const proDuct =[
+        {id:'01',name:'ชานมไข่มุก',price:'45฿',img:'https://img.thaibuffer.com/u/2019/wanwanat/boba/boba-1.jpg'},
+        {id:'02',name:'กาเเฟไข่มุก',price:'45฿',img:'https://img.thaibuffer.com/u/2021/wanwanat/05.jpg'},
+        {id:'03',name:'ชาเขียวไข่มุ',price:'45฿',img:'https://img.thaibuffer.com/u/2019/wanwanat/boba/boba-2.jpg'},
+        {id:'04',name:'ช็อกโกเเลต',price:'45฿',img:'https://img.thaibuffer.com/u/2021/wanwanat/03.jpg'},
+        {id:'05',name:'ชานมสตรอว์เบอร์รี',price:'45฿',img:'https://img.thaibuffer.com/u/2021/wanwanat/08.jpg'},
+        {id:'06',name:'ชามะพร้าว',price:'45฿',img:'https://img.thaibuffer.com/u/2021/wanwanat/11.jpg'},
+        {id:'07',name:'ชาเผือก',price:'45฿',img:'https://img.thaibuffer.com/u/2021/wanwanat/09.jpg'},
+        {id:'08',name:'ชาเเตงโม',price:'45฿',img:'https://img.thaibuffer.com/u/2021/wanwanat/04_1.jpg'},
+        {id:'09',name:'ชาเขียวมะลิ',price:'45฿',img:'https://img.thaibuffer.com/u/2021/wanwanat/06_1.jpg'},
+        {id:'10',name:'ชานมลิ้นจี่',price:'45฿',img:'https://img.thaibuffer.com/u/2021/wanwanat/07.jpg'},
+    ]
+
+let text = "<ul>";
+let x = document.getElementById("demo")
+proDuct.forEach(showProduct);
+x.innerHTML = text;
+
+function showProduct(value) {
+            text += `<li>ID: ${value.id} <br>Name: ${value.name} <br>Price: ${value.price} <br><img src=${value.img}></li>`
+            
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        } 
+
+
+</script>
+
+</body>
+</html>
